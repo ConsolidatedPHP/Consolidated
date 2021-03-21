@@ -1,0 +1,16 @@
+## General
+.env
+.tmp
+
+## VSCode Specific
+/.devcontainer
+
+## Composer
+composer.lock
+vendor/
+
+## PHPUnit
+.phpunit.result.cache
+
+## Git
+.subsplit

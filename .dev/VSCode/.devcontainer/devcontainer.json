@@ -1,0 +1,100 @@
+{
+	"name": "Warehouse Ecosystem Development",
+
+    "dockerComposeFile": "../.dev/Docker/docker-compose.yaml",
+
+	"workspaceFolder": "/var/www/html",
+    "service": "workspace",
+
+	"extensions": [
+        // General
+        "EditorConfig.EditorConfig",
+
+        // Styling
+        "PKief.material-icon-theme",
+        "zhuangtongfa.material-theme",
+
+        //
+        // Miscellaneous
+        //
+        "waderyan.gitblame",
+        "ms-vscode.atom-keybindings",
+        "silvenon.mdx",
+
+        // Bash
+        "shakram02.bash-beautify",
+
+        //
+        // PHP Plugins
+        //
+        "bmewburn.vscode-intelephense-client",
+        "ikappas.phpcs",
+        "junstyle.php-cs-fixer",
+        "felixfbecker.php-debug",
+        "calebporzio.better-phpunit",
+    ],
+
+    "settings": {
+        "atomKeymap.promptV3Features": true,
+
+        "breadcrumbs.enabled": true,
+
+        "editor.acceptSuggestionOnEnter": "off",
+        "editor.fontFamily": "'fira code', 'monospace', monospace, 'Droid Sans Fallback'",
+        "editor.fontLigatures": true,
+        "editor.multiCursorModifier": "ctrlCmd",
+        "editor.wordSeparators": "`~!@#%^&*()-=+[{]}\\|;:'\",.<>/?",
+        "editor.formatOnPaste": false,
+        "files.insertFinalNewline": true,
+
+        "editor.minimap.enabled": false,
+        "explorer.openEditors.visible": 0,
+
+        "extensions.ignoreRecommendations": true,
+
+        "search.exclude": {
+            "**/dist": true,
+            "**/node_modules": true,
+            "**/storage": true,
+            "**/vendor": true,
+            "public_html/vendor": true
+        },
+
+        "search.showLineNumbers": true,
+        "search.smartCase": true,
+
+        "telemetry.enableTelemetry": false,
+        "telemetry.enableCrashReporter": false,
+
+        //
+        // Language Settings
+        //
+        "[php]": {
+            "editor.defaultFormatter": "junstyle.php-cs-fixer"
+        },
+
+        //
+        // Appereance settings
+        //
+        "workbench.iconTheme": "material-icon-theme",
+        "material-icon-theme.activeIconPack": "none",
+
+        //
+        // PHP Plugins
+        //
+
+        // phpcs
+	    "phpcs.standard": "./.dev/PHP/phpcs.xml",
+        "phpcs.executablePath": "/var/www/html/vendor/bin/phpcs",
+
+        // php-cs-fixer
+	    "php-cs-fixer.executablePath": "/var/www/html/vendor/bin/php-cs-fixer", // Make no sense, but needs to be absolute path
+        "php-cs-fixer.config": "/var/www/html/.dev/PHP/.php_cs", // Make no sense, but needs to be absolute path
+        "php-cs-fixer.allowRisky": true,
+        "php-cs-fixer.onsave": true,
+
+        
+        "command-runner.showRunCommandInEditorContextMenu": false,
+        "command-runner.showRunCommandInExplorerContextMenu": false,
+    }
+}

@@ -1,0 +1,18 @@
+version: '3'
+
+services:
+  workspace:
+    build:
+      context: .
+      dockerfile: ./Images/Workspace/Dockerfile
+      args:
+        type: cli
+        version: ${PHP_VERSION-8.0}
+    volumes:
+      - ${APP_PATH-../../}:/var/www/html
+    networks:
+      - application
+    tty: true
+
+networks:
+  application:
