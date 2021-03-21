@@ -14,7 +14,7 @@ trait UsesTraits
      *
      * @return mixed
      */
-    protected function runTrait(string $methodName, string $trait)
+    protected function runTrait(string $methodName, string $trait): mixed
     {
         $method = $this->getTraitMethod($methodName, $trait);
 
