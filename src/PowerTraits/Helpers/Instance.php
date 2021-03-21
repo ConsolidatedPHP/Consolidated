@@ -7,7 +7,7 @@ class Instance
     public static function recursiveUses(string | object $class): array
     {
         if (is_object($class)) {
-            $class = get_class($class);
+            $class = $class::class;
         }
 
         $results = [];
@@ -22,7 +22,7 @@ class Instance
     protected static function recursiveTraitUses(string | object $class): array
     {
         if (is_object($class)) {
-            $class = get_class($class);
+            $class = $class::class;
         }
 
         $results = class_uses($class) ?: [];
